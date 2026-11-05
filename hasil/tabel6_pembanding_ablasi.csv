@@ -1,7 +1,0 @@
-Model atau setelan,Accuracy (%),Macro F1 (%)
-"MNB, TF-IDF (model utama)",88.20 ± 1.55,88.19 ± 1.55
-"MNB, raw counts",87.30 ± 2.01,87.29 ± 2.02
-"Linear SVM, TF-IDF",89.53 ± 2.13,89.53 ± 2.13
-"Logistic regression, TF-IDF",89.63 ± 2.13,89.63 ± 2.13
-"MNB, kata negasi dibuang",88.20 ± 1.70,88.19 ± 1.70
-"MNB, tanpa normalisasi slang",86.96 ± 1.60,86.95 ± 1.60
