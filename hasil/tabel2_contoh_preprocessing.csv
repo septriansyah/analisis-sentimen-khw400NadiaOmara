@@ -1,0 +1,9 @@
+Tahap,Hasil
+Teks asli,"makasih ya kak nad, sukses sllu, sehat sellu panjang usia utk kak nad dan semua tim 
+lup yuuu 🤗🤗🤗"
+Cleansing,makasih ya kak nad sukses sllu sehat sellu panjang usia utk kak nad dan semua tim lup yu
+Case folding,makasih ya kak nad sukses sllu sehat sellu panjang usia utk kak nad dan semua tim lup yu
+Tokenizing,"[makasih, ya, kak, nad, sukses, sllu, sehat, sellu, panjang, usia, utk, kak, nad, dan, semua, tim, lup, yu]"
+Normalisasi,"[terima, kasih, ya, kak, nadia, sukses, selalu, sehat, sellu, panjang, usia, untuk, kak, nadia, dan, semua, tim, lup, yuk]"
+Stopword removal,"[terima, kasih, sukses, selalu, sehat, sellu, panjang, usia, semua, tim, lup]"
+Stemming,"[terima, kasih, sukses, selalu, sehat, sellu, panjang, usia, semua, tim, lup]"

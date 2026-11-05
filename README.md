@@ -1,9 +1,9 @@
 # Analisis Sentimen Komentar YouTube KHW Part 400 dengan Multinomial Naïve Bayes
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-Multinomial%20NB-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
-[![Sastrawi](https://img.shields.io/badge/Sastrawi-stemming%20Indonesia-2a78d6)](https://github.com/har07/PySastrawi)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Septriansyah/analisis-sentimen-khw400/blob/main/Analisis_Sentimen_KHW400_MNB.ipynb)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-Multinomial%20NB-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![Sastrawi](https://img.shields.io/badge/Sastrawi-1.0.1-1f77b4?style=flat-square)](https://github.com/har07/PySastrawi)
+[![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/Septriansyah/analisis-sentimen-khw400/blob/main/Analisis_Sentimen_KHW400_MNB.ipynb)
 
 Repositori ini berisi kode, data, dan hasil analisis sentimen terhadap 19.122 komentar YouTube pada video **KHW Part 400** di kanal Nadia Omara. Saya melabeli komentar dengan leksikon sentimen bahasa Indonesia, lalu melatih model **Multinomial Naïve Bayes (MNB)** dengan fitur TF-IDF. Alur analisisnya sama dengan artikel saya tentang ulasan aplikasi Gauth: cek label manual, perbandingan dengan model lain, ablasi preprocessing, analisis error, dan analisis aspek per hari.
 
@@ -68,7 +68,7 @@ File [`data/komentar_khw400_clean.csv`](data/komentar_khw400_clean.csv) berisi k
 
 ![Gambar 1. Alur penelitian](figures/fig1_alur_penelitian.png)
 
-Semua langkah acak (sampling, pengacakan, dan pembagian data) memakai *seed* 42, jadi hasilnya sama setiap kali notebook dijalankan.
+Diagram ini saya buat di draw.io. File sumbernya, [`figures/alur_penelitian.drawio`](figures/alur_penelitian.drawio), bisa dibuka dan diedit di [app.diagrams.net](https://app.diagrams.net). Semua langkah acak (sampling, pengacakan, dan pembagian data) memakai *seed* 42, jadi hasilnya sama setiap kali notebook dijalankan.
 
 ## Preprocessing
 
@@ -210,7 +210,7 @@ Saya mengevaluasi MNB (α = 1) dengan *stratified* 5-fold cross-validation. Kosa
 
 Presisi, recall, dan F1 adalah rata-rata makro dua kelas. Akurasi berkisar dari 86,19% (fold 3) sampai 90,02% (fold 1).
 
-<p align="center"><img src="figures/fig5_confusion_matrix.png" alt="Gambar 5. Confusion matrix" width="520"></p>
+<p align="center"><img src="figures/fig5_confusion_matrix.png" alt="Gambar 5. Confusion matrix" width="560"></p>
 
 Dari 211 komentar uji negatif, model menebak benar 186 dan menganggap 25 sebagai positif. Dari 210 komentar uji positif, model menebak benar 176 dan menganggap 34 sebagai negatif. Recall kelas negatif 0,882 dan recall kelas positif 0,838.
 
@@ -342,6 +342,7 @@ analisis-sentimen-khw400/
 ├── data/
 │   └── komentar_khw400_clean.csv        # 19.122 komentar tanpa nama akun
 ├── figures/                             # sembilan gambar di README
+│   └── alur_penelitian.drawio           # sumber diagram alur (draw.io)
 └── hasil/
     ├── khw400_semua_komentar_berlabel.csv   # semua komentar + skor dan label leksikon
     ├── khw400_dataset_final.csv             # 2.102 komentar untuk pelatihan
